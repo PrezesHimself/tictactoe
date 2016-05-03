@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+.flex {
+  display: flex;
+}
+.hide {
+  visibility: hidden;
+}
+.matrix {
+  width: 100px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  &.init {
+    visibility: visible;
+  }
+}
+
+input:checked + .matrix {
+  visibility: visible;
+}
+.cell {
+  width: 33px;
+  height: 33px;
+  flex: 0 0 33%;
+  background: #000;
+  border: 1px solid #fff;
+}
